@@ -51,11 +51,13 @@ public class LoginServiceTest {
         // 4자리 이상, 20자리 이하. 영어 대소문자, 숫자, 언더 바(_) 사용 가능
         loginService.userRegistration("ydh", "ehdghk123!");
     }
+
     @Test(expected = UserIdNotSuitableException.class)
     public void 너무_긴_아이디로_회원가입을_시도하면_UserIdNotSuitableException() {
         // 4자리 이상, 20자리 이하. 영어 대소문자, 숫자, 언더 바(_) 사용 가능
         loginService.userRegistration("ydhwaydhwaydhwaydhwaydhwa", "ehdghk123!");
     }
+
     @Test(expected = UserIdNotSuitableException.class)
     public void 영어_대소문자_숫자_언더바_외의_문자로_작성된_아이디로_회원가입을_시도하면_UserIdNotSuitableException() {
         // 4자리 이상, 20자리 이하. 영어 대소문자, 숫자, 언더 바(_) 사용 가능
