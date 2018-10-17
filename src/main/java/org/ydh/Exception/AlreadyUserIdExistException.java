@@ -2,18 +2,18 @@ package org.ydh.Exception;
 
 public class AlreadyUserIdExistException extends RuntimeException {
 
-    private final int ERR_CODE;
+    private final ErrorCode ERR_CODE;
 
-    public AlreadyUserIdExistException(String msg, int errCode) {
+    public AlreadyUserIdExistException(String msg, ErrorCode errCode) {
         super(msg);
         ERR_CODE = errCode;
     }
 
     public AlreadyUserIdExistException(String msg) {
-        this(msg, 102);
+        this(msg, ErrorCode.ALREADY_USER_ID_EXIST);
     }
 
-    public int getErrCode() {
+    public ErrorCode getErrCode() {
         return ERR_CODE;
     }
 }

@@ -2,18 +2,18 @@ package org.ydh.Exception;
 
 public class UserIdNotSuitableException extends RuntimeException {
 
-    private final int ERR_CODE;
+    private final ErrorCode ERR_CODE;
 
-    public UserIdNotSuitableException(String msg, int errCode) {
+    public UserIdNotSuitableException(String msg, ErrorCode errCode) {
         super(msg);
         ERR_CODE = errCode;
     }
 
     public UserIdNotSuitableException(String msg) {
-        this(msg, 201);
+        this(msg, ErrorCode.USER_ID_NOT_SUITABLE);
     }
 
-    public int getErrCode() {
+    public ErrorCode getErrCode() {
         return ERR_CODE;
     }
 }
